@@ -15,7 +15,7 @@ dispatcher = updater.dispatcher
 # set up the introductory statement for the bot when the /start command is invoked
 def subchats(update, context):
     chat_id = update.effective_chat.id
-    context.bot.send_message(chat_id=chat_id, text="Black@ Subchats:\nNFTs: https://t.me/+ZIPHvgLOolI0NTkx\nDevs: https://t.me/+k41i3dRF6Q1iZmFh\nINTROS: https://t.me/+87_rYST1DDpjMWIx\n101: https://t.me/+CrhrvUDrM8g2MjIx")
+    context.bot.send_message(chat_id=chat_id, text=config("SUBCHATS"))
 
 
 # set up the introductory statement for the bot when the /start command is invoked
@@ -27,14 +27,13 @@ def resources(update, context):
     else:
         # return all resources summarized 
         pass
-    context.bot.send_message(chat_id=chat_id, text="Black@NFTs Subchat: https://t.me/+ZIPHvgLOolI0NTkx")
+    context.bot.send_message(chat_id=chat_id, text=config("SUBCHATS"))
 
 
 # obtain the information of the word provided and format before presenting.
 def get_word_info(update, context):
     word_info =  update.message.text
-    word_info = word_info.replace('/', "")
-    word_info = word_info.replace('wtf ', "")
+    word_info = word_info.replace('/wtf ', "")
     wtfWord = get_info(word_info)
     word = wtfWord['word']
     definition = wtfWord['definition']
