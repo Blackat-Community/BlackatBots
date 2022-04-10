@@ -15,7 +15,7 @@ dispatcher = updater.dispatcher
 # set up the introductory statement for the bot when the /start command is invoked
 def subchats(update, context):
     chat_id = update.effective_chat.id
-    context.bot.send_message(chat_id=chat_id, text="Black@ Subchats:\nNFTs: https://t.me/+ZIPHvgLOolI0NTkx\nDevs: https://t.me/+k41i3dRF6Q1iZmFh\nINTROS: https://t.me/+87_rYST1DDpjMWIx")
+    context.bot.send_message(chat_id=chat_id, text="Black@ Subchats:\nNFTs: https://t.me/+ZIPHvgLOolI0NTkx\nDevs: https://t.me/+k41i3dRF6Q1iZmFh\nINTROS: https://t.me/+87_rYST1DDpjMWIx\n101: https://t.me/+CrhrvUDrM8g2MjIx")
 
 
 # set up the introductory statement for the bot when the /start command is invoked
